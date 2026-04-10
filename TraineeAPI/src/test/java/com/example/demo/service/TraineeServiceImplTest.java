@@ -48,15 +48,15 @@ class TraineeServiceImplTest {
         verify(repo, times(1)).findAll();
     }
 
-    @Test
-    void testGetAllTrainees_Fail() {
-        when(repo.findAll()).thenReturn(Collections.emptyList());
+    // @Test
+    // void testGetAllTrainees_Fail() {
+    //     when(repo.findAll()).thenReturn(Collections.emptyList());
     
-        List<Trainee> result = service.getAllTrainees();
+    //     List<Trainee> result = service.getAllTrainees();
     
-        // Will fail because size = 0
-        assertEquals(1, result.size());
-    }
+    //     // Will fail because size = 0
+    //     assertEquals(1, result.size());
+    // }
 
     @Test
     void testGetTraineeById() {
