@@ -92,10 +92,10 @@ class TraineeServiceImplTest {
 
     @Test
     void testDeleteTrainee() {
-        doNothing().when(repo).deleteById(1);
+        doNothing().when(repo).deleteById(2);
 
-        service.deleteTrainee(1);
+        service.deleteTrainee(2);
 
-        verify(repo, times(1)).deleteById(1);
+        verify(repo, times(1)).deleteById(2);
     }
 }
