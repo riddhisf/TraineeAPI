@@ -20,6 +20,8 @@ public class TraineeController {
     @Autowired
     private ITraineeService service;
 
+    private int a=10;
+
     @GetMapping
     public List<Trainee> getAllTrainees() {
         return service.getAllTrainees();
