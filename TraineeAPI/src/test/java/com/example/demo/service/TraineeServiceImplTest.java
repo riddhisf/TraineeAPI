@@ -49,6 +49,16 @@ class TraineeServiceImplTest {
     }
 
     @Test
+    void testGetAllTrainees_Fail() {
+        when(repo.findAll()).thenReturn(Collections.emptyList());
+    
+        List<Trainee> result = service.getAllTrainees();
+    
+        // Will fail because size = 0
+        assertEquals(1, result.size());
+    }
+
+    @Test
     void testGetTraineeById() {
         when(repo.findById(1)).thenReturn(Optional.of(trainee));
 
